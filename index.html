@@ -160,7 +160,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <img src="static/images/aligned_probing.svg" alt="Icon">
+          <img src="static/images/aligned_probing.svg" width="5%" alt="Icon">
         </div>
       </div>
     </div>
@@ -211,6 +211,19 @@
 
 
 
+<section class="section hero is-light">
+  <div class="">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <img src="static/images/aligned_probing.svg" width="5%" alt="Icon">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -222,26 +235,32 @@
 
         <p>
           <h5 class="is-5">i) Lower layers strongly encode toxic language.</h5>
-          LMs encode toxic language most strongly in their lower layers. Particularly, we find the most information for the <strong class="blue">input</strong> toxicity within <strong class="blue">input</strong> internals (Scenario Input).
-          This peak varies depending on the toxicity attribute. More contextualized attributes (such as <i>Thread</i>) peak in lower layers, whereas we find the highest information for attributes more sensitive to individual words, like <i>Sexually Explicit</i>, in lower layers.
-          <br>          <br>
+          <div>
+            LMs encode toxic language most strongly in their lower layers. Particularly, we find the most information for the <strong class="blue">input</strong> toxicity within <strong class="blue">input</strong> internals (Scenario Input).
+            This peak varies depending on the toxicity attribute. More contextualized attributes (such as <i>Thread</i>) peak in lower layers, whereas we find the highest information for attributes more sensitive to individual words, like <i>Sexually Explicit</i>, in lower layers.
+          </div>
+<br>          <br>
 
           <img src="static/images/results_1.png" alt="Results 1">
         </p>
           <br>
           <p>
             <h5 class="is-5">ii) Instruction-tuning changes how information is encoded.</h5>
+          <div>
             Comparing pre-trained and instruction-tuned LMs shows that instruction-tuning increase information about <strong class="blue">input</strong> toxicity while reducing information about the <strong class="yellow">output</strong> toxicity.
-          Interestingly, this effect is more pronounced for toxicity attributes that are less sensitive to single words, such as <i>Threat</i>, hinting at the contextualized impact of instruction-tuning.
-            <br>          <br>
+            Interestingly, this effect is more pronounced for toxicity attributes that are less sensitive to single words, such as <i>Threat</i>, hinting at the contextualized impact of instruction-tuning.
+          </div>
+ <br>          <br>
             <img src="static/images/results_2.png" alt="Results 2">
           </p>
           <br>
           <p>
             <h5 class="is-5">iii) Language models are less toxic when encoding more information about input toxicity.</h5>
-          Analyzing the relationship between toxic behavior and how LMs encode toxic language (<i>left</i>) shows that models encoding more information about the <strong class="blue">input</strong> toxicity tend to produce less toxic outputs.
-          Simultaneously, more toxic models also encode more information about the toxicity of the generated <strong class="yellow">output</strong>.
-          We further find that this correlation has a causal component: intervening on single model layers to simulate the removal of toxicity-related information increases the toxicity of the model's output (<i>right</i>).
+           <div>
+             Analyzing the relationship between toxic behavior and how LMs encode toxic language (<i>left</i>) shows that models encoding more information about the <strong class="blue">input</strong> toxicity tend to produce less toxic outputs.
+             Simultaneously, more toxic models also encode more information about the toxicity of the generated <strong class="yellow">output</strong>.
+             We further find that this correlation has a causal component: intervening on single model layers to simulate the removal of toxicity-related information increases the toxicity of the model's output (<i>right</i>).
+           </div>
             <br>          <br>
             <img src="static/images/results_3.png" alt="Results 3">
           </p>
@@ -251,6 +270,19 @@
   </div>
 </section>
 
+
+
+<section class="section hero is-light">
+  <div class="">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <img src="static/images/aligned_probing.svg" width="5%" alt="Icon">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <section class="section">
