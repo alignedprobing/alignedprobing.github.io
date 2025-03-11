@@ -141,8 +141,7 @@
           <p>
             We introduce <strong>Aligned Probing</strong>, a method that traces toxic language from the <strong class="blue">input</strong> through all model layers to the generated
             <strong class="yellow">output</strong>. This approach provides a more comprehensive evaluation of toxicity in LMs by aligning
-            and quantifying where and how strongly models encode toxic information. Additionally, we recognize toxicity as a
-            heterogeneous phenomenon and analyze six fine-grained attributes, such as <i>Threat</i> and <i>Identity Attack</i>,
+            and quantifying where and how strongly models encode toxic information. Additionally, we treat toxicity as a heterogeneous phenomenon and analyze six fine-grained attributes, such as <i>Threat</i> and <i>Identity Attack</i>,
             as defined by the <a href="https://perspectiveapi.com/" class="purple"><u>PERSPECTIVE API</u></a>.
           </p>
           <p>
@@ -189,10 +188,10 @@
 
             <li><strong>Encoding of Toxic Language in LMs:</strong> We use linear models (probes) to evaluate how LMs encode information about toxicity at each model layer across four distinct scenarios:
               <ul>
-                <li><strong>Scenario <u>Input</u>:</strong> Examines how LMs capture the toxicity of the <strong class="blue">input</strong> within their <strong class="blue">input</strong> internals.</li>
-                <li><strong>Scenario <u>Forward</u>:</strong> Analyzes how LMs propagate information about <strong class="blue">input</strong> toxicity within their <strong class="yellow">output</strong> internals.</li>
-                <li><strong>Scenario <u>Output</u>:</strong> Investigates how strongly LMs encode the toxicity of the generated <strong class="yellow">output</strong> in their <strong class="yellow">output</strong> internals.</li>
-                <li><strong>Scenario <u>Backward</u>:</strong> Studies how much information about <strong class="yellow">output</strong> toxicity is retained within the <strong class="blue">input</strong> internals.</li>
+                <li><strong><u>Input</u> scenario:</strong> Examines how LMs capture the toxicity of the <strong class="blue">input</strong> within their <strong class="blue">input</strong> internals.</li>
+                <li><strong><u>Forward</u> scenario:</strong> Analyzes how LMs propagate information about <strong class="blue">input</strong> toxicity within their <strong class="yellow">output</strong> internals.</li>
+                <li><strong><u>Output</u> scenario:</strong> Investigates how strongly LMs encode the toxicity of the generated <strong class="yellow">output</strong> in their <strong class="yellow">output</strong> internals.</li>
+                <li><strong><u>Backward</u> scenario:</strong> Studies how much information about <strong class="yellow">output</strong> toxicity is retained within the <strong class="blue">input</strong> internals.</li>
               </ul>
             </li>
 
@@ -240,7 +239,7 @@
           <h5 class="is-5">i) Lower layers strongly encode toxic language.</h5>
           <div>
             LMs encode toxic language most strongly in their lower layers. Particularly, we find the most information for the <strong class="blue">input</strong> toxicity within <strong class="blue">input</strong> internals (Scenario Input).
-            This peak varies depending on the toxicity attribute. More contextualized attributes (such as <i>Thread</i>) peak in lower layers, whereas we find the highest information for attributes more sensitive to individual words, like <i>Sexually Explicit</i>, in lower layers.
+            This peak varies depending on the toxicity attribute. More contextualized attributes (such as <i>Threat</i>) peak in higher layers, whereas we find the highest information for attributes more sensitive to individual words, like <i>Sexually Explicit</i>, in lower layers.
           </div>
 <br>          <br>
 
@@ -250,7 +249,7 @@
           <p>
             <h5 class="is-5">ii) Instruction-tuning changes how information is encoded.</h5>
           <div>
-            Comparing pre-trained and instruction-tuned LMs shows that instruction-tuning increase information about <strong class="blue">input</strong> toxicity while reducing information about the <strong class="yellow">output</strong> toxicity.
+            Comparing pre-trained and instruction-tuned LMs shows that instruction-tuning increases information about <strong class="blue">input</strong> toxicity while reducing information about the <strong class="yellow">output</strong> toxicity.
             Interestingly, this effect is more pronounced for toxicity attributes that are less sensitive to single words, such as <i>Threat</i>, hinting at the contextualized impact of instruction-tuning.
           </div>
  <br>          <br>
@@ -293,7 +292,7 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Touching on a Dilemma of Generative LMs</h2>
+        <h2 class="title is-3">The Dilemma of Generative LMs</h2>
 
 
         <div class="content has-text-justified">
